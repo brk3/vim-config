@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/bourke/.irssi'
-let g:netrw_dirhist_2='/home/bourke/sandbox/goldfinch/branches/debug-branch/goldfinch'
-let g:netrw_dirhist_3='/home/bourke/sandbox/goldfinch/trunk/goldfinch'
-let g:netrw_dirhist_4='/home/bourke/.slimrat'
-let g:netrw_dirhist_5='/media/USB_STICK'
-let g:netrw_dirhist_6='/home/bourke/tmp/wdlxtv_flash/1.02.21_WDLXTV.COM_WDLXTV_LIVE-0.4.5.1'
-let g:netrw_dirhist_7='/home/bourke/sandbox/android/IrishSpeedCams/src/com/android/hellogooglemaps'
