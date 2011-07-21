@@ -16,6 +16,10 @@ set modeline
 set dictionary=/usr/share/dict/words
 set foldnestmax=2
 
+" stash backup files in one place
+silent execute '!mkdir ~/.backup 2>/dev/null'
+set backupdir=~/.backup/
+
 " syntax highlighting
 filetype plugin on
 syntax on
