@@ -42,3 +42,6 @@ au BufWinEnter *.* silent loadview
 
 " javaimp
 "let g:JavaImpPaths=""
+
+" F5 to delete all trailing whitespace
+:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
