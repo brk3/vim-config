@@ -1,7 +1,4 @@
-set autoindent
 set wrap
-set smartindent
-set paste
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -15,6 +12,8 @@ set smartcase
 set modeline
 set dictionary=/usr/share/dict/words
 set foldnestmax=2
+
+filetype indent on
 
 " stash backup files in one place
 silent execute '!mkdir ~/.backup 2>/dev/null'
@@ -45,3 +44,8 @@ au BufWinEnter *.* silent loadview
 
 " F5 to delete all trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+" F2 to build
+set makeprg=./debug.sh
+set errorformat=%f:%l:%c:%*\\d:%*\\d:%*\\s%m
+:noremap <F2> :update<CR>:make<CR>
