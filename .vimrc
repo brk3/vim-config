@@ -39,8 +39,10 @@ set statusline=%F%m%r%h%w\ %=%l,%v(%L\L)
 au BufWinLeave * mkview
 au BufWinEnter *.* silent loadview
 
-" javaimp
-"let g:JavaImpPaths=""
+" javaimp plugin
+let g:JavaImpPaths="/home/bourke/Documents/android-10-src/," .
+\ ""
+let g:JavaImpDataDir = $HOME . "/vim/JavaImp" 
 
 " F5 to delete all trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
