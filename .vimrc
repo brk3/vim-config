@@ -41,8 +41,11 @@ au BufWinEnter *.* silent loadview
 
 " javaimp plugin
 let g:JavaImpPaths="/home/bourke/Documents/android-10-src/," .
-\ ""
+    \ ""
 let g:JavaImpDataDir = $HOME . "/vim/JavaImp"
+let g:JavaImpDocPaths = "/home/bourke/bin/android-sdk-linux_x86/docs/reference," .
+    \ ""
+let g:JavaImpDocViewer = "google-chrome"
 
 " F5 to delete all trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
