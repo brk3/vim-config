@@ -47,10 +47,14 @@ let g:JavaImpDocPaths = "/home/bourke/bin/android-sdk-linux_x86/docs/reference,"
     \ ""
 let g:JavaImpDocViewer = "google-chrome"
 
+" F2 to toggle paste
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 " F5 to delete all trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-" F2 to build
+"
 set makeprg=./debug.sh
 set errorformat=%f:%l:%c:%*\\d:%*\\d:%*\\s%m
-:noremap <F2> :update<CR>:make<CR>
