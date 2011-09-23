@@ -1,3 +1,4 @@
+set nocompatible
 set wrap
 set expandtab
 set tabstop=4
