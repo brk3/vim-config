@@ -35,6 +35,7 @@ highlight javaComment ctermfg=DarkGreen
 " eclim settings
 let b:EclimLocationListFilter = ["R cannot be resolved to a variable",]
 let g:EclimJavaImportExclude = ["^android.R",]
+let g:EclimPythonValidate=0
 
 " status line
 set laststatus=2
@@ -60,6 +61,6 @@ set showmode
 " F5 to delete all trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-"
-set makeprg=./debug.sh
-set errorformat=%f:%l:%c:%*\\d:%*\\d:%*\\s%m
+" make
+"set makeprg=./debug.sh
+"set errorformat=%f:%l:%c:%*\\d:%*\\d:%*\\s%m
