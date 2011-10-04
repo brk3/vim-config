@@ -33,7 +33,7 @@ let java_highlight_java_lang_ids=1
 highlight javaComment ctermfg=DarkGreen
 
 " eclim settings
-let b:EclimLocationListFilter = ["R cannot be resolved to a variable",]
+let b:EclimLocationListFilter = ["R cannot be resolved to a variable", "TODO"]
 let g:EclimJavaImportExclude = ["^android.R",]
 let g:EclimPythonValidate=0
 
