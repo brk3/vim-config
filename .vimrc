@@ -1,22 +1,27 @@
 set nocompatible
-set wrap
+
+" tabs/indents
 set expandtab
 set tabstop=4
 set shiftwidth=4
+
 set background=dark
+
+" works fine when you save often
 set noswapfile
+
+set wrap
 set vb t_vb=
-set backup
 set nohlsearch
 set ignorecase
 set smartcase
 set modeline
 set dictionary=/usr/share/dict/words
-set foldnestmax=2
 
 filetype indent on
 
 " stash backup files in one place
+set backup
 silent execute '!mkdir ~/.backup 2>/dev/null'
 set backupdir=~/.backup/
 au BufWritePre * let &bex = '@' . substitute(getcwd(), '/', '%', 'g')
@@ -42,6 +47,7 @@ set laststatus=2
 set statusline=%F%m%r%h%w\ %=%l,%v(%L\L)
 
 " save folds
+set foldnestmax=2
 au BufWinLeave * mkview
 au BufWinEnter *.* silent loadview
 
