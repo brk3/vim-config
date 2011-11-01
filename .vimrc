@@ -19,7 +19,7 @@ filetype indent on
 " stash backup files in one place
 silent execute '!mkdir ~/.backup 2>/dev/null'
 set backupdir=~/.backup/
-"au BufWritePre * let &bex = '@' . substitute(getcwd(), '/', '%', 'g')
+au BufWritePre * let &bex = '@' . substitute(getcwd(), '/', '%', 'g')
 
 " syntax highlighting
 filetype plugin on
