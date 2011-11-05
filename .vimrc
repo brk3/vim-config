@@ -51,6 +51,14 @@ set foldnestmax=2
 au BufWinLeave * mkview
 au BufWinEnter *.* silent loadview
 
+" javaimp plugin
+let g:JavaImpPaths="/home/bourke/Documents/android-10-src/," .
+    \ ""
+let g:JavaImpDataDir = $HOME . "/vim/JavaImp"
+let g:JavaImpDocPaths = "/home/bourke/bin/android-sdk-linux_x86/docs/reference," .
+    \ ""
+let g:JavaImpDocViewer = "google-chrome"
+
 " F2 to toggle paste
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
