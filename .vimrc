@@ -67,6 +67,9 @@ set showmode
 " F5 to delete all trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
+" F6 to call JavaImp
+:nnoremap <F6> :JavaImp<CR>
+
 " make
 "set makeprg=./debug.sh
 "set errorformat=%f:%l:%c:%*\\d:%*\\d:%*\\s%m
