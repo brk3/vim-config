@@ -4,7 +4,7 @@ set nocompatible
 set expandtab
 set tabstop=4
 set shiftwidth=4
-set textwidth=70
+set textwidth=79
 
 set background=dark
 
