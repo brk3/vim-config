@@ -52,6 +52,14 @@ set foldnestmax=2
 au BufWinLeave * mkview
 au BufWinEnter *.* silent loadview
 
+" javaimp plugin
+let g:JavaImpPaths="/home/bourke/Documents/android-10-src/," .
+    \ ""
+let g:JavaImpDataDir = $HOME . "/vim/JavaImp"
+let g:JavaImpDocPaths = "/home/bourke/bin/android-sdk-linux_x86/docs/reference," .
+    \ ""
+let g:JavaImpDocViewer = "google-chrome"
+
 " F2 to toggle paste
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
@@ -59,6 +67,9 @@ set showmode
 
 " F5 to delete all trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+" F6 to call JavaImp
+:nnoremap <F6> :JavaImp<CR>
 
 " make
 "set makeprg=./debug.sh
