@@ -3,9 +3,6 @@ set nocompatible
 " display incomplete commands
 set showcmd
 
-" make that backspace key work the way it should
-set backspace=indent,eol,start
-
 " tabs/indents
 set expandtab
 set tabstop=4
