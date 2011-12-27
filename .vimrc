@@ -57,7 +57,7 @@ au BufWinLeave * mkview
 au BufWinEnter *.* silent loadview
 
 " javaimp plugin
-let g:JavaImpPaths="/home/bourke/Documents/android-10-src/," .
+let g:JavaImpPaths="/home/bourke/documents/android-10-src/," .
     \ ""
 let g:JavaImpDataDir = $HOME . "/vim/JavaImp"
 let g:JavaImpDocPaths = "/home/bourke/bin/android-sdk-linux_x86/docs/reference," .
