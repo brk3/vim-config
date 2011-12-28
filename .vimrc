@@ -7,7 +7,10 @@ set showcmd
 set expandtab
 set tabstop=4
 set shiftwidth=4
+
+" line width
 set textwidth=79
+:au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
 
 set background=dark
 
