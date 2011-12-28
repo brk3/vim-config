@@ -54,8 +54,8 @@ set laststatus=2
 set statusline=%F%m%r%h%w\ %=%l,%v(%L\L)
 
 " folds
-set foldnestmax=2
-set foldmethod=indent
+"set foldnestmax=2
+"set foldmethod=indent
 au BufWinLeave * mkview
 au BufWinEnter *.* silent loadview
 
