@@ -24,6 +24,7 @@ set ignorecase
 set smartcase
 set modeline
 set dictionary=/usr/share/dict/words
+set number
 
 filetype indent on
 
