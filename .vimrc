@@ -77,7 +77,7 @@ set showmode
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " F6 to call JavaImp
-:nnoremap <F6> :JavaImp<CR>
+:nnoremap <F6> :JavaImpSilent<CR>
 
 " make
 "set makeprg=./debug.sh
