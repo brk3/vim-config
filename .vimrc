@@ -24,7 +24,6 @@ set ignorecase
 set smartcase
 set modeline
 set dictionary=/usr/share/dict/words
-set number
 
 filetype indent on
 
@@ -78,6 +77,9 @@ set showmode
 
 " F6 to call JavaImp
 :nnoremap <F6> :JavaImpSilent<CR>
+
+" F7 to call clearmatches()
+:nnoremap <F7> :call clearmatches()<CR>
 
 " make
 "set makeprg=./debug.sh
