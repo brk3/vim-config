@@ -61,8 +61,9 @@ au BufWinEnter *.* silent loadview
 
 " javaimp plugin
 let g:JavaImpPaths="/home/bourke/documents/android-15-src/," .
-    \ "/home/bourke/sandbox/ActionBarSherlock," .
-    \ "/home/bourke/sandbox/twitter4j-android-2.2.5"
+    \ "/home/bourke/sandbox/ActionBarSherlock/library/src," .
+    \ "/usr/lib/jvm/java-6-sun-1.6.0.26/src," .
+    \ "/home/bourke/sandbox/twitter4j-android-2.2.5/twitter4j-core/src/main/java/twitter4j/"
 let g:JavaImpDataDir = $HOME . "/vim/JavaImp"
 let g:JavaImpDocPaths = "/home/bourke/bin/android-sdk-linux_x86/docs/reference," .
     \ ""
