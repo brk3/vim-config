@@ -38,7 +38,7 @@ filetype plugin on
 syntax on
 highlight LineNr ctermfg=darkgray
 
-" java specfic
+" java specific
 let java_highlight_all=1
 let java_ignore_javadoc=1
 let java_highlight_java_lang_ids=1
@@ -74,15 +74,19 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
+" F4 to call clearmatches()
+:nnoremap <F4> :call clearmatches()<CR>
+
 " F5 to delete all trailing whitespace
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " F6 to call JavaImp
 :nnoremap <F6> :JavaImpSilent<CR>
 
-" F7 to call clearmatches()
-:nnoremap <F7> :call clearmatches()<CR>
-
-" make
-"set makeprg=./debug.sh
-"set errorformat=%f:%l:%c:%*\\d:%*\\d:%*\\s%m
+" F7 to call clean redundant Java imports and sort them
+function JavaImpClean()
+    %!/home/bourke/bin/clean_imports.sh %
+    :JavaImpSort
+endfunction
+:command JavaImpClean exec JavaImpClean()
+:nnoremap <F7> :JavaImpClean<CR>
