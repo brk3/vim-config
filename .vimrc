@@ -90,3 +90,6 @@ function JavaImpClean()
 endfunction
 :command JavaImpClean exec JavaImpClean()
 :nnoremap <F7> :JavaImpClean<CR>
+
+" S to 'stamp' the current line with yanked text
+nnoremap S "_ddP
