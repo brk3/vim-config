@@ -84,3 +84,8 @@ endfunction
 
 " S to 'stamp' the current line with yanked text
 nnoremap S "_ddP
+
+" Set makeprg to 'ant debug' for Java files
+autocmd BufRead *.java
+    \ set makeprg=ant\ -find\ build.xml\ debug
+    \|set errorformat=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
