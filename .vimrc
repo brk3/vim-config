@@ -1,20 +1,20 @@
 set nocompatible
 
-" display incomplete commands
+" Display incomplete commands
 set showcmd
 
-" tabs/indents
+" Tabs/Indents
 set expandtab
 set tabstop=4
 set shiftwidth=4
 
-" line width
+" Line width
 set textwidth=79
 :au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
 
 set background=dark
 
-" works fine when you save often
+" Works fine when you save often
 set noswapfile
 
 set wrap
@@ -27,46 +27,37 @@ set dictionary=/usr/share/dict/words
 
 filetype indent on
 
-" stash backup files in one place
+" Stash backup files in one place
 set backup
 silent execute '!mkdir ~/.backup 2>/dev/null'
 set backupdir=~/.backup/
 au BufWritePre * let &bex = '@' . substitute(getcwd(), '/', '%', 'g')
 
-" syntax highlighting
+" Syntax highlighting
 filetype plugin on
 syntax on
 highlight LineNr ctermfg=darkgray
-
-" java specific
 let java_highlight_all=1
 let java_ignore_javadoc=1
 let java_highlight_java_lang_ids=1
 highlight javaComment ctermfg=DarkGreen
 
-" eclim settings
-let b:EclimLocationListFilter = ["R cannot be resolved to a variable", "TODO"]
-let g:EclimJavaImportExclude = ["^android.R",]
-let g:EclimPythonValidate=0
-
-" status line
+" Status line
 set laststatus=2
 set statusline=%F%m%r%h%w\ %=%l,%v(%L\L)
 
-" folds
+" Folds
 "set foldnestmax=2
 "set foldmethod=indent
 au BufWinLeave * mkview
 au BufWinEnter *.* silent loadview
 
-" javaimp plugin
-let g:JavaImpPaths="/home/bourke/documents/android-15-src/," .
+" JavaImp plugin
+let g:JavaImpPaths="/home/bourke/bin/android-sdk-linux_r17/sources/android-15," .
     \ "/home/bourke/sandbox/ActionBarSherlock/library/src," .
     \ "/usr/lib/jvm/java-6-sun-1.6.0.26/src," .
     \ "/home/bourke/sandbox/twitter4j-android-2.2.5/twitter4j-core/src/main/java/twitter4j/"
 let g:JavaImpDataDir = $HOME . "/vim/JavaImp"
-let g:JavaImpDocPaths = "/home/bourke/bin/android-sdk-linux_x86/docs/reference," .
-    \ ""
 let g:JavaImpDocViewer = "google-chrome"
 
 " F2 to toggle paste
