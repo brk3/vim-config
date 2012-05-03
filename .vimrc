@@ -57,7 +57,7 @@ let g:JavaImpPaths="/home/bourke/bin/android-sdk-linux_r17/sources/android-15," 
     \ "/home/bourke/sandbox/ActionBarSherlock/library/src," .
     \ "/usr/lib/jvm/java-6-sun-1.6.0.26/src," .
     \ "/home/bourke/sandbox/twitter4j-android-2.2.5/twitter4j-core/src/main/java/twitter4j/"
-let g:JavaImpDataDir = $HOME . "/vim/JavaImp"
+let g:JavaImpDataDir = $HOME . "/.JavaImp"
 let g:JavaImpDocViewer = "google-chrome"
 
 " F2 to toggle paste
