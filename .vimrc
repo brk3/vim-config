@@ -89,3 +89,8 @@ nnoremap S "_ddP
 autocmd BufRead *.java
     \ set makeprg=ant\ -find\ build.xml\ debug
     \|set errorformat=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\gen$\|\bin$',
+  \ 'file': '\.class$\|\.so$',
+  \ }
