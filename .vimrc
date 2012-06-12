@@ -1,3 +1,4 @@
+" Don't retain compatibility with vi
 set nocompatible
 
 " Display incomplete commands
@@ -12,6 +13,7 @@ set shiftwidth=4
 set textwidth=79
 :au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
 
+" Dark terminal background
 set background=dark
 
 " Works fine when you save often
@@ -25,8 +27,6 @@ set smartcase
 set modeline
 set dictionary=/usr/share/dict/words
 
-filetype indent on
-
 " Stash backup files in one place
 set backup
 silent execute '!mkdir ~/.backup 2>/dev/null'
@@ -34,6 +34,7 @@ set backupdir=~/.backup/
 au BufWritePre * let &bex = '@' . substitute(getcwd(), '/', '%', 'g')
 
 " Syntax highlighting
+filetype indent on
 filetype plugin on
 syntax on
 highlight LineNr ctermfg=darkgray
@@ -45,6 +46,10 @@ highlight javaComment ctermfg=DarkGreen
 " Status line
 set laststatus=2
 set statusline=%F%m%r%h%w\ %=%l,%v(%L\L)
+if version >= 700
+  au InsertEnter * hi StatusLine ctermfg=lightblue
+  au InsertLeave * hi StatusLine ctermfg=white
+endif
 
 " Folds
 "set foldnestmax=2
