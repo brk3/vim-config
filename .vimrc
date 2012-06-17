@@ -96,6 +96,6 @@ autocmd BufRead *.java
     \|set errorformat=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\gen$\|\bin$',
-  \ 'file': '\.class$\|\.so$',
+  \ 'dir':  'gen$\|bin$\|libs$\|\.git$',
+  \ 'file': '\.class$|\.so$',
   \ }
