@@ -58,10 +58,12 @@ au BufWinLeave * mkview
 au BufWinEnter *.* silent loadview
 
 " JavaImp plugin
-let g:JavaImpPaths="/home/bourke/bin/android-sdk-linux_r17/sources/android-15," .
-    \ "/home/bourke/sandbox/ActionBarSherlock/library/src," .
-    \ "/usr/lib/jvm/java-6-sun-1.6.0.26/src," .
-    \ "/home/bourke/sandbox/twitter4j-android-2.2.5/twitter4j-core/src/main/java/twitter4j/"
+let g:JavaImpPaths=$HOME . "/bin/android-sdk-linux/sources/android-15," .
+    \ $HOME . "/sandbox/ActionBarSherlock/library/src," .
+    \ "/usr/lib/jvm/jdk1.7.0/src," .
+    \ $HOME . "/sandbox/glimmr/src/main/java," .
+    \ $HOME . "/sandbox/twitter4j-android-2.2.5/twitter4j-core/src/," .
+    \ $HOME . "/sandbox/FlickrjApi4Android/flickrj-android/src"
 let g:JavaImpDataDir = $HOME . "/.JavaImp"
 let g:JavaImpDocViewer = "google-chrome"
 
@@ -81,7 +83,7 @@ set showmode
 
 " F7 to call clean redundant Java imports and sort them
 function JavaImpClean()
-    %!/home/bourke/bin/clean_imports.sh %
+    %!$HOME/bin/clean_imports.sh %
     :JavaImpSort
 endfunction
 :command JavaImpClean exec JavaImpClean()
@@ -97,5 +99,5 @@ autocmd BufRead *.java
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'gen$\|bin$\|libs$\|\.git$',
-  \ 'file': '\.class$|\.so$',
+  \ 'file': '\.class$\|\.so$|\.png$',
   \ }
