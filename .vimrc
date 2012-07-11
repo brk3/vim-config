@@ -11,7 +11,8 @@ set shiftwidth=4
 
 " Line width
 set textwidth=79
-:au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
+au FileType gitcommit set tw=72
 
 " Dark terminal background
 set background=dark
