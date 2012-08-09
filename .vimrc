@@ -102,3 +102,9 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  'gen$\|bin$\|libs$\|\.git$',
   \ 'file': '\.class$\|\.so$|\.png$',
   \ }
+
+" Gui options
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+colorscheme hybrid
