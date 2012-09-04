@@ -73,13 +73,8 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
-" F4 to call clearmatches()
-:nnoremap <F4> :call clearmatches()<CR>
-
-" F5 to delete all trailing whitespace
-:nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-
-" F6 to call JavaImp
+:nnoremap <F4> :ToggleBadWhitespace<CR>
+:nnoremap <F5> :EraseBadWhitespace<CR>
 :nnoremap <F6> :JavaImpSilent<CR>
 
 " F7 to call clean redundant Java imports and sort them
@@ -98,6 +93,7 @@ autocmd BufRead *.java
     \ set makeprg=ant\ -find\ build.xml\ debug
     \|set errorformat=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
 
+" CtrlP plugin
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'gen$\|bin$\|libs$\|\.git$',
   \ 'file': '\.class$\|\.so$|\.png$',
@@ -108,3 +104,5 @@ let g:ctrlp_custom_ignore = {
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
 colorscheme hybrid
+
+call pathogen#infect()
