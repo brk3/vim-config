@@ -1,5 +1,27 @@
-" Don't retain compatibility with vi
 set nocompatible
+
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+filetype plugin indent on
+
+" Bundles
+" github repos
+Bundle 'garbas/vim-snipmate.git'
+Bundle "honza/snipmate-snippets"
+Bundle 'honza/snipmate-snippets.git'
+Bundle 'kien/ctrlp.vim.git'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle 'tpope/vim-repeat.git'
+Bundle 'tpope/vim-surround.git'
+
+" vim-scripts repos
+Bundle 'JavaImp.vim--Lee'
+Bundle 'taglist.vim'
+Bundle 'bad-whitespace'
 
 " Display incomplete commands
 set showcmd
@@ -20,11 +42,14 @@ set background=dark
 " Works fine when you save often
 set noswapfile
 
-set wrap
-set vb t_vb=
+" Search
 set nohlsearch
 set ignorecase
 set smartcase
+
+" Other
+set wrap
+set vb t_vb=
 set modeline
 set dictionary=/usr/share/dict/words
 
@@ -34,10 +59,7 @@ silent execute '!mkdir ~/.backup 2>/dev/null'
 set backupdir=~/.backup/
 au BufWritePre * let &bex = '@' . substitute(getcwd(), '/', '%', 'g')
 
-" Syntax highlighting
-filetype indent on
-filetype plugin on
-syntax on
+" Syntax highlighting tweaks
 highlight LineNr ctermfg=darkgray
 let java_highlight_all=1
 let java_ignore_javadoc=1
@@ -103,6 +125,5 @@ let g:ctrlp_custom_ignore = {
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
-colorscheme hybrid
 
-call pathogen#infect()
+"call pathogen#infect()
