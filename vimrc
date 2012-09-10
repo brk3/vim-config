@@ -51,7 +51,8 @@ set smartcase
 set wrap
 set vb t_vb=
 set modeline
-set dictionary=/usr/share/dict/words
+set dictionary=/usr/share/dict/words "CTRL-X_CTRL-K
+set spelllang=en_gb
 
 " Stash backup files in one place
 set backup
