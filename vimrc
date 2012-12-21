@@ -17,6 +17,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle 'tpope/vim-repeat.git'
 Bundle 'tpope/vim-surround.git'
+Bundle 'scrooloose/nerdcommenter'
 
 " vim-scripts repos
 Bundle 'JavaImp.vim--Lee'
@@ -46,6 +47,9 @@ set noswapfile
 set nohlsearch
 set ignorecase
 set smartcase
+
+" Max number of tabs
+set tabpagemax=50
 
 " Other
 set wrap
