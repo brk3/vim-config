@@ -9,14 +9,8 @@ filetype plugin indent on
 
 " Bundles
 " github repos
-Bundle 'garbas/vim-snipmate.git'
-Bundle "honza/snipmate-snippets"
-Bundle 'honza/snipmate-snippets.git'
 Bundle 'kien/ctrlp.vim.git'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
 Bundle 'tpope/vim-repeat.git'
-Bundle 'tpope/vim-surround.git'
 Bundle 'scrooloose/nerdcommenter'
 
 " vim-scripts repos
