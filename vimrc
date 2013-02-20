@@ -80,12 +80,12 @@ au BufWinLeave * mkview
 au BufWinEnter *.* silent loadview
 
 " JavaImp plugin
-let g:JavaImpPaths=$HOME . "/bin/android-sdk-linux/sources/android-15," .
-    \ $HOME . "/sandbox/ActionBarSherlock/library/src," .
-    \ "/usr/lib/jvm/jdk1.7.0/src," .
-    \ $HOME . "/sandbox/glimmr/src/main/java," .
-    \ $HOME . "/sandbox/twitter4j-android-2.2.5/twitter4j-core/src/," .
-    \ $HOME . "/sandbox/FlickrjApi4Android/flickrj-android/src"
+let g:JavaImpPaths=
+            \ $ANDROID_HOME . "/sources/android-17," .
+            \ $JAVA_HOME . "/src," .
+            \ $HOME . "/sandbox/ActionBarSherlock/library/src," .
+            \ $HOME . "/sandbox/FlickrjApi4Android/flickrj-android/src/main," .
+            \ $HOME . "/sandbox/glimmr/src/main"
 let g:JavaImpDataDir = $HOME . "/.JavaImp"
 let g:JavaImpDocViewer = "google-chrome"
 
