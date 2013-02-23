@@ -28,8 +28,9 @@ set shiftwidth=4
 
 " Line width
 set textwidth=79
-au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>79v.\+', -1)
 au FileType gitcommit set tw=72
+highlight longLine ctermfg=DarkRed
+au BufWinEnter * let w:m2=matchadd('longLine', '\%>79v.\+', -1)
 
 " Dark terminal background
 set background=dark
@@ -59,10 +60,10 @@ set backupdir=~/.backup/
 au BufWritePre * let &bex = '@' . substitute(getcwd(), '/', '%', 'g')
 
 " Syntax highlighting tweaks
-highlight LineNr ctermfg=darkgray
 let java_highlight_all=1
 let java_ignore_javadoc=1
 let java_highlight_java_lang_ids=1
+highlight LineNr ctermfg=darkgray
 highlight javaComment ctermfg=DarkGreen
 
 " Status line
