@@ -12,6 +12,8 @@ filetype plugin indent on
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'tpope/vim-repeat.git'
 Bundle 'scrooloose/nerdcommenter'
+" cd ftdetect && ln -s ../bundle/ultisnips/ftdetect/* .
+Bundle 'SirVer/ultisnips'
 
 " vim-scripts repos
 Bundle 'JavaImp.vim--Lee'
@@ -20,6 +22,9 @@ Bundle 'bad-whitespace'
 
 " Display incomplete commands
 set showcmd
+
+" Relative linenumbers
+set relativenumber
 
 " Tabs/Indents
 set expandtab
@@ -110,14 +115,12 @@ endfunction
 " S to 'stamp' the current line with yanked text
 nnoremap S "_ddP
 
-" Set makeprg to 'ant debug' for Java files
-autocmd BufRead *.java
-    \ set makeprg=ant\ -find\ build.xml\ debug
-    \|set errorformat=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
+" \l to list available snippets
+nnoremap <leader>l :call UltiSnips_ListSnippets()<CR>
 
 " CtrlP plugin
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'gen$\|bin$\|libs$\|\.git$',
+  \ 'dir':  'gen$\|bin$\|libs$\|\.git$|\target$',
   \ 'file': '\.class$\|\.so$|\.png$',
   \ }
 
@@ -125,5 +128,3 @@ let g:ctrlp_custom_ignore = {
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
-
-"call pathogen#infect()
