@@ -24,7 +24,7 @@ Bundle 'bad-whitespace'
 set showcmd
 
 " Relative linenumbers
-set relativenumber
+"set relativenumber
 
 " Tabs/Indents
 set expandtab
@@ -89,9 +89,7 @@ au BufWinEnter *.* silent loadview
 let g:JavaImpPaths=
             \ $ANDROID_HOME . "/sources/android-17," .
             \ $JAVA_HOME . "/src," .
-            \ $HOME . "/sandbox/ActionBarSherlock/library/src," .
-            \ $HOME . "/sandbox/FlickrjApi4Android/flickrj-android/src/main," .
-            \ $HOME . "/sandbox/glimmr/src/main"
+            \ $HOME . "/.m2"
 let g:JavaImpDataDir = $HOME . "/.JavaImp"
 let g:JavaImpDocViewer = "google-chrome"
 
