@@ -12,8 +12,8 @@ filetype plugin indent on
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'tpope/vim-repeat.git'
 Bundle 'scrooloose/nerdcommenter'
-" cd ftdetect && ln -s ../bundle/ultisnips/ftdetect/* .
 Bundle 'SirVer/ultisnips'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " vim-scripts repos
 Bundle 'JavaImp.vim--Lee'
@@ -74,11 +74,6 @@ highlight javaComment ctermfg=DarkGreen
 
 " Status line
 set laststatus=2
-set statusline=%F%m%r%h%w\ %=%l,%v(%L\L)
-if version >= 700
-  au InsertEnter * hi StatusLine ctermfg=lightblue
-  au InsertLeave * hi StatusLine ctermfg=white
-endif
 
 " Folds
 "set foldnestmax=2
@@ -127,3 +122,5 @@ let g:ctrlp_custom_ignore = {
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
+
+set noshowmode
