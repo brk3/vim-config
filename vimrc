@@ -31,6 +31,8 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+
 " Line width
 set textwidth=79
 au FileType gitcommit set tw=72
