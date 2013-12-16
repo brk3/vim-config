@@ -14,6 +14,7 @@ Bundle 'tpope/vim-repeat.git'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'vim-ruby/vim-ruby'
 
 " vim-scripts repos
 Bundle 'JavaImp.vim--Lee'
