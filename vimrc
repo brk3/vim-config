@@ -33,12 +33,13 @@ set tabstop=4
 set shiftwidth=4
 
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 " Line width
-set textwidth=79
+set textwidth=100
 au FileType gitcommit set tw=72
 highlight longLine ctermfg=DarkRed
-au BufWinEnter * let w:m2=matchadd('longLine', '\%>79v.\+', -1)
+au BufWinEnter * let w:m2=matchadd('longLine', '\%>100v.\+', -1)
 
 " Dark terminal background
 set background=dark
