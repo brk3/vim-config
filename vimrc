@@ -79,12 +79,6 @@ highlight javaComment ctermfg=DarkGreen
 " Status line
 set laststatus=2
 
-" Folds
-"set foldnestmax=2
-"set foldmethod=indent
-au BufWinLeave * mkview
-au BufWinEnter *.* silent loadview
-
 " JavaImp plugin
 let g:JavaImpPaths=
             \ $ANDROID_HOME . "/sources/android-17," .
