@@ -122,3 +122,4 @@ let g:ctrlp_custom_ignore = {
 :set guioptions-=r  "remove right-hand scroll bar
 
 set noshowmode
+set t_Co=256
