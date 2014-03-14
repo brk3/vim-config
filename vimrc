@@ -26,12 +26,12 @@ Bundle 'bad-whitespace'
 set showcmd
 
 " Relative linenumbers
-"set relativenumber
+set relativenumber
 
 " Tabs/Indents
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
