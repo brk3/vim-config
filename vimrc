@@ -15,6 +15,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tomasr/molokai'
 
 " vim-scripts repos
 Bundle 'JavaImp.vim--Lee'
@@ -120,6 +121,8 @@ let g:ctrlp_custom_ignore = {
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
+
+colorscheme molokai
 
 set noshowmode
 set t_Co=256
