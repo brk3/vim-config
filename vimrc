@@ -82,8 +82,7 @@ set laststatus=2
 " JavaImp plugin
 let g:JavaImpPaths=
             \ $ANDROID_HOME . "/sources/android-17," .
-            \ $JAVA_HOME . "/src," .
-            \ $HOME . "/.m2"
+            \ $JAVA_HOME . "/src"
 let g:JavaImpDataDir = $HOME . "/.JavaImp"
 let g:JavaImpDocViewer = "google-chrome"
 
