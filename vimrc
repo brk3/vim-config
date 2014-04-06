@@ -33,8 +33,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType java setlocal shiftwidth=4 tabstop=4
 
 " Line width
 set textwidth=100
