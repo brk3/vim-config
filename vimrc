@@ -2,8 +2,13 @@ set nocompatible
 
 " Vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+if has("unix")
+  set rtp+=~/.vim/bundle/vundle/
+  call vundle#rc()
+else
+  set rtp+=~/vimfiles/bundle/vundle/
+  call vundle#rc('$HOME/vimfiles/bundle/')
+endif
 Bundle 'gmarik/vundle'
 filetype plugin indent on
 
@@ -16,6 +21,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tomasr/molokai'
+Bundle 'PProvost/vim-ps1'
 
 " vim-scripts repos
 Bundle 'JavaImp.vim--Lee'
@@ -40,6 +46,8 @@ set textwidth=100
 au FileType gitcommit set tw=72
 highlight longLine ctermfg=DarkRed
 au BufWinEnter * let w:m2=matchadd('longLine', '\%>100v.\+', -1)
+
+au BufNewFile,BufRead *.ps1 setf ps1
 
 " Dark terminal background
 set background=dark
@@ -116,11 +124,18 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " Gui options
-:set guioptions-=m  "remove menu bar
-:set guioptions-=T  "remove toolbar
-:set guioptions-=r  "remove right-hand scroll bar
+if has("gui_running")
+  :set guioptions-=m  "remove menu bar
+  :set guioptions-=T  "remove toolbar
+  :set guioptions-=r  "remove right-hand scroll bar
+  set guifont=Consolas:h14:cANSI
+  set lines=40 columns=99
+endif
 
-colorscheme molokai
+" Only set molokai if on proper terminal or gvim
+if has("unix") || has("gui_running")
+  colorscheme molokai
+endif
 
 set noshowmode
 set t_Co=256
