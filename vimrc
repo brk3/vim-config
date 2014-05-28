@@ -22,6 +22,7 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tomasr/molokai'
 Bundle 'PProvost/vim-ps1'
+Bundle 'mattn/emmet-vim'
 
 " vim-scripts repos
 Bundle 'JavaImp.vim--Lee'
