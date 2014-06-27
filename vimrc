@@ -9,25 +9,27 @@ else
   set rtp+=~/vimfiles/bundle/vundle/
   call vundle#rc('$HOME/vimfiles/bundle/')
 endif
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 filetype plugin indent on
 
-" Bundles
+" Plugins
 " github repos
-Bundle 'kien/ctrlp.vim.git'
-Bundle 'tpope/vim-repeat.git'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'SirVer/ultisnips'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tomasr/molokai'
-Bundle 'PProvost/vim-ps1'
-Bundle 'mattn/emmet-vim'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'SirVer/ultisnips'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tomasr/molokai'
+Plugin 'PProvost/vim-ps1'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
 
 " vim-scripts repos
-Bundle 'JavaImp.vim--Lee'
-Bundle 'taglist.vim'
-Bundle 'bad-whitespace'
+Plugin 'JavaImp.vim--Lee'
+Plugin 'taglist.vim'
+Plugin 'bad-whitespace'
 
 " Display incomplete commands
 set showcmd
@@ -141,3 +143,6 @@ endif
 
 set noshowmode
 set t_Co=256
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
