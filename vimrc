@@ -22,10 +22,12 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tomasr/molokai'
 Plugin 'PProvost/vim-ps1'
 Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Shougo/neocomplcache.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'jiangmiao/auto-pairs'
 
 " vim-scripts repos
 Plugin 'JavaImp.vim--Lee'
@@ -148,6 +150,7 @@ set t_Co=256
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
 
+let g:acp_enableAtStartup = 0
 let g:neocomplcache_enable_at_startup = 1
 
 " make backspace work like most other apps
