@@ -54,6 +54,7 @@ highlight longLine ctermfg=DarkRed
 au BufWinEnter * let w:m2=matchadd('longLine', '\%>100v.\+', -1)
 
 au BufNewFile,BufRead *.ps1 setf ps1
+au BufNewFile,BufRead Vagrantfile setf ruby
 
 " Dark terminal background
 set background=dark
