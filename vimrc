@@ -22,12 +22,11 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tomasr/molokai'
 Plugin 'PProvost/vim-ps1'
 Plugin 'mattn/emmet-vim'
-"Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Shougo/neocomplcache.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'brk3/groovyindent'
 
 " vim-scripts repos
 Plugin 'JavaImp.vim--Lee'
