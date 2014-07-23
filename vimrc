@@ -155,3 +155,5 @@ let g:neocomplcache_enable_at_startup = 1
 
 " make backspace work like most other apps
 set backspace=2
+
+set colorcolumn=100
