@@ -35,8 +35,9 @@ Plugin 'bad-whitespace'
 " Display incomplete commands
 set showcmd
 
-" Relative linenumbers
+" Hybrid linenumbers
 set relativenumber
+set number
 
 " Tabs/Indents
 set expandtab
