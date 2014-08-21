@@ -25,7 +25,6 @@ Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'brk3/groovyindent'
 
 " vim-scripts repos
