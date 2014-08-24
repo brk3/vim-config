@@ -45,6 +45,7 @@ set tabstop=2
 set shiftwidth=2
 
 autocmd FileType java setlocal shiftwidth=4 tabstop=4
+autocmd FileType python setlocal sw=2 sts=2 et
 
 " Line width
 set textwidth=100
