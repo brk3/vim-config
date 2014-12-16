@@ -29,7 +29,6 @@ Plugin 'brk3/groovyindent'
 
 " vim-scripts repos
 Plugin 'JavaImp.vim--Lee'
-Plugin 'taglist.vim'
 Plugin 'bad-whitespace'
 
 " Display incomplete commands
