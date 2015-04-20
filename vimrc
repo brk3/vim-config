@@ -26,6 +26,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
 Plugin 'brk3/groovyindent'
+Plugin 'fatih/vim-go'
 
 " vim-scripts repos
 Plugin 'JavaImp.vim--Lee'
@@ -157,3 +158,10 @@ let g:neocomplcache_enable_at_startup = 1
 set backspace=2
 
 set colorcolumn=100
+
+" vim-go plugin config
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
