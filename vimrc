@@ -142,7 +142,7 @@ endif
 
 " Only set molokai if on proper terminal or gvim
 if has("unix") || has("gui_running")
-  colorscheme molokai
+  silent! colorscheme molokai
 endif
 
 set noshowmode
