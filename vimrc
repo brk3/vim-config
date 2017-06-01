@@ -32,6 +32,7 @@ Plugin 'fatih/vim-go'
 " vim-scripts repos
 Plugin 'JavaImp.vim--Lee'
 Plugin 'bad-whitespace'
+Plugin 'taglist.vim'
 
 " Display incomplete commands
 set showcmd
