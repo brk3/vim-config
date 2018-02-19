@@ -27,12 +27,10 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
 Plugin 'brk3/groovyindent'
-Plugin 'fatih/vim-go'
 
 " vim-scripts repos
 Plugin 'JavaImp.vim--Lee'
 Plugin 'bad-whitespace'
-Plugin 'taglist.vim'
 
 " Display incomplete commands
 set showcmd
