@@ -15,24 +15,18 @@ filetype plugin indent on
 " Plugins
 " github repos
 Plugin 'kien/ctrlp.vim.git'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'tpope/vim-repeat.git'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tomasr/molokai'
 Plugin 'PProvost/vim-ps1'
 Plugin 'mattn/emmet-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
-Plugin 'brk3/groovyindent'
 Plugin 'lepture/vim-jinja'
+Plugin 'hashivim/vim-terraform'
 
 " vim-scripts repos
 Plugin 'JavaImp.vim--Lee'
 Plugin 'bad-whitespace'
+Plugin 'groovyindent-unix'
 
 " Display incomplete commands
 set showcmd
@@ -43,11 +37,8 @@ set number
 
 " Tabs/Indents
 set expandtab
-set tabstop=2
-set shiftwidth=2
-
-autocmd FileType java setlocal shiftwidth=4 tabstop=4
-autocmd FileType python setlocal sw=4 sts=4 tw=79 et
+set tabstop=4
+set shiftwidth=4
 
 " Line width
 set textwidth=100
@@ -124,9 +115,6 @@ endfunction
 " S to 'stamp' the current line with yanked text
 nnoremap S "_ddP
 
-" \l to list available snippets
-"nnoremap <leader>l :call UltiSnips_ListSnippets()<CR>
-
 " CtrlP plugin
 let g:ctrlp_custom_ignore = {
   \ 'dir':  'gen$\|bin$\|libs$\|\.git$|\target$',
@@ -142,18 +130,8 @@ if has("gui_running")
   set lines=40 columns=99
 endif
 
-" Only set molokai if on proper terminal or gvim
-if has("unix") || has("gui_running")
-  silent! colorscheme molokai
-  highlight Normal ctermbg=NONE
-  highlight nonText ctermbg=NONE
-endif
-
 set noshowmode
 set t_Co=256
-
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'badwolf'
 
 let g:acp_enableAtStartup = 0
 let g:neocomplcache_enable_at_startup = 1
