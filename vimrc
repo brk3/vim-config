@@ -147,3 +147,8 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" vim-terraform config
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+autocmd BufNewFile,BufRead *tf   set filetype=terraform
