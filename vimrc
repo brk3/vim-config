@@ -133,13 +133,12 @@ endif
 set noshowmode
 set t_Co=256
 
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-
 " make backspace work like most other apps
 set backspace=2
 
+" cursorcolumn
 set colorcolumn=100
+highlight ColorColumn ctermbg=Gray
 
 " vim-go plugin config
 let g:go_highlight_functions = 1
