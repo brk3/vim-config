@@ -21,6 +21,8 @@ Plugin 'tpope/vim-endwise'
 Plugin 'sheerun/vim-polyglot'
 syntax on
 
+Plugin 'Yggdroot/indentLine'
+
 " vim-scripts repos
 Plugin 'bad-whitespace'
 
