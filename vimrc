@@ -88,6 +88,7 @@ highlight javaComment ctermfg=DarkGreen
 
 " Status line
 set laststatus=2
+set ruler
 
 " JavaImp plugin
 let g:JavaImpPaths=
@@ -131,7 +132,6 @@ if has("gui_running")
   set lines=40 columns=99
 endif
 
-set noshowmode
 set t_Co=256
 
 " make backspace work like most other apps
