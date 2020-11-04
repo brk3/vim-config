@@ -83,10 +83,10 @@ let java_highlight_all=1
 let java_ignore_javadoc=1
 let java_highlight_java_lang_ids=1
 let loaded_matchparen = 1
-highlight LineNr ctermfg=darkgray
+highlight LineNr ctermfg=gray
 highlight javaComment ctermfg=DarkGreen
 
-" Status line
+"" Status line
 set laststatus=2
 set ruler
 
