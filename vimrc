@@ -1,30 +1,21 @@
 set nocompatible
 
-" Vundle
-filetype off
-if has("unix")
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-else
-  set rtp+=~/vimfiles/bundle/vundle/
-  call vundle#rc('$HOME/vimfiles/bundle/')
+" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-Plugin 'gmarik/vundle'
-filetype plugin indent on
 
-" Plugins
-" github repos
-Plugin 'kien/ctrlp.vim.git'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-endwise'
+call plug#begin('~/.vim/plugged')
 
-Plugin 'sheerun/vim-polyglot'
-syntax on
+Plug 'sheerun/vim-polyglot'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-endwise'
+Plug 'vim-scripts/bad-whitespace'
 
-Plugin 'Yggdroot/indentLine'
-
-" vim-scripts repos
-Plugin 'bad-whitespace'
+call plug#end()
 
 " Display incomplete commands
 set showcmd
@@ -44,14 +35,8 @@ au FileType gitcommit set tw=72
 highlight longLine ctermfg=DarkRed
 au BufWinEnter * let w:m2=matchadd('longLine', '\%>100v.\+', -1)
 
-au BufNewFile,BufRead *.ps1 setf ps1
-au BufNewFile,BufRead Vagrantfile setf ruby
-
 " Dark terminal background
 set background=dark
-
-" Works fine when you save often
-set noswapfile
 
 " Search
 set nohlsearch
@@ -68,6 +53,7 @@ set vb t_vb=
 set modeline
 set dictionary=/usr/share/dict/words "CTRL-X_CTRL-K
 set spelllang=en_gb
+set noswapfile
 
 " Stash backup files in one place
 set backup
@@ -86,7 +72,6 @@ set showmode
 
 :nnoremap <F4> :ToggleBadWhitespace<CR>
 :nnoremap <F5> :EraseBadWhitespace<CR>
-:nnoremap <F6> :JavaImpSilent<CR>
 
 " S to 'stamp' the current line with yanked text
 nnoremap S "_ddP
