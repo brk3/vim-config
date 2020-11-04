@@ -16,17 +16,11 @@ filetype plugin indent on
 " github repos
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'PProvost/vim-ps1'
-Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-endwise'
-Plugin 'lepture/vim-jinja'
-Plugin 'hashivim/vim-terraform'
+Plugin 'sheerun/vim-polyglot'
 
 " vim-scripts repos
-Plugin 'JavaImp.vim--Lee'
 Plugin 'bad-whitespace'
-Plugin 'groovyindent-unix'
 
 " Display incomplete commands
 set showcmd
