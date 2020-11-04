@@ -65,6 +65,7 @@ set tabpagemax=50
 
 " Other
 set wrap
+set linebreak
 set vb t_vb=
 set modeline
 set dictionary=/usr/share/dict/words "CTRL-X_CTRL-K
