@@ -1,5 +1,4 @@
 #!/bin/bash -e
 
 rm -rf ~/.vim*
-git clone https://github.com/brk3/vim-config.git /tmp
-cp /tmp/vim-config/vimrc ~/.vimrc
+curl --silent https://raw.githubusercontent.com/brk3/vim-config/master/vimrc -o ~/.vimrc
