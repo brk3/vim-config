@@ -17,7 +17,9 @@ filetype plugin indent on
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-endwise'
+
 Plugin 'sheerun/vim-polyglot'
+syntax on
 
 " vim-scripts repos
 Plugin 'bad-whitespace'
