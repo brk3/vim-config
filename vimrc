@@ -20,6 +20,9 @@ call plug#end()
 " Display incomplete commands
 set showcmd
 
+" Dont search as I type
+set noincsearch
+
 " Hybrid linenumbers
 set relativenumber
 set number
