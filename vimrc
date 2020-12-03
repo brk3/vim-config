@@ -51,6 +51,7 @@ set tabpagemax=50
 
 " Other
 set wrap
+set showbreak=…
 set linebreak
 set vb t_vb=
 set modeline
