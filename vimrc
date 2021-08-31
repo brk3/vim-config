@@ -103,3 +103,6 @@ set backspace=2
 " cursorcolumn
 set colorcolumn=100
 highlight ColorColumn ctermbg=Gray
+
+" https://stackoverflow.com/questions/14732651/vim-red-highlight
+let g:is_posix = 1
