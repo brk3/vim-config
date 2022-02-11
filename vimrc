@@ -14,6 +14,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/bad-whitespace'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
