@@ -36,8 +36,6 @@ set shiftwidth=2
 " Line width
 set textwidth=100
 au FileType gitcommit set tw=72
-highlight longLine ctermfg=DarkRed
-au BufWinEnter * let w:m2=matchadd('longLine', '\%>100v.\+', -1)
 
 " Dark terminal background
 set background=dark
@@ -102,7 +100,7 @@ set t_Co=256
 set backspace=2
 
 " cursorcolumn
-set colorcolumn=100
+set colorcolumn=101
 highlight ColorColumn ctermbg=Gray
 
 " https://stackoverflow.com/questions/14732651/vim-red-highlight
