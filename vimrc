@@ -99,8 +99,9 @@ set t_Co=256
 " make backspace work like most other apps
 set backspace=2
 
-" cursorcolumn
+" rulers
 set colorcolumn=101
+set cursorline
 highlight ColorColumn ctermbg=Gray
 
 " https://stackoverflow.com/questions/14732651/vim-red-highlight
